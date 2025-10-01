@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RJ papai</title>
-    <style>
-        body {background-color: yellowgreen;}
+    <title>RJ</title>
+        <style>
+            header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: whitesmoke;
+  padding: 10px 20px;
+}
+
+/* Menu padrão: horizontal */
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  padding: 10px 20px;
+  background: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px lightgrey;
+}
+
+nav a:last-child {
+  background: dodgerblue;
+  color: white;
+}
+
+nav a:hover {
+  filter: brightness(90%);
+}
+
+/* Mobile: menu em coluna */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
+          body {background-color: white;}
         #unica {width: 300px}
         .fotografias{
             display: flex;
@@ -17,27 +66,37 @@
             width: 150px;
             border-radius: 20px;
         }
-    </style>
-</head>
-<body>
-    <header>
+        .poesia p:last-child{
+            font-weight: bold;
+            color: black;
+            text-shadow: 10px;
+            
+        }
+        </style>
+    </head>
+    <body>
+        <header>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="local.html">Localização</a>
-                <a href="multimedia.html"></a>
                 <a href="info.html">Informação</a>
+                <a href="multimedia.html">Multimédia</a>
             </nav>
-            <h1>RJ - Brasil</h1>
         </header>
         <main>
             <section>
                 <h2>Rio de janeiro</h2>
                 <img id = "unica" src="images/rio-de-janeiro.jpg" alt="Rio de Janeiro">
             </section>
+            <p>
+                <a href="#fotografias">Fotografias</a>
+                <a href="#video">Video</a>
+                <a href="#poesia">Poesia</a>
+            </p>
             <h2>Multimédia</h2>
             <p>Nesta página encontra conteúdos multimédia</p>
             <section>
-                <h3>Fotografias</h3>
+                <h3 id = "fotografias">Fotografias</h3>
                 <div class = "fotografias">
                     <img src="images/1x1.jpg" alt="Rio de Janeiro">
                     <img src="images/1x2.jpg" alt="Rio de Janeiro">
@@ -50,7 +109,26 @@
                 </div>
             </section>
             <section>
-
+                <h3 id = "video">Video</h3>
+                <div class = "video">
+                    <iframe src="https://youtu.be/ZYA0Bz3Tsl8?si=BkovgAOS8sLiweci" frameborder="0"></iframe>
+                </div>
+            </section>
+            <section>
+                <h3 id = "poesia">Poesia</h3>
+                <div class = "poesia">
+                    <p>"Rio de Janeiro,</p> 
+                    <p>a água é a tua bandeira,</p>
+                    <p>agita as suas cores,</p>
+                    <p>sopra e retine no vento,</p>
+                    <p>cidade, náiade negra,</p>
+                    <p>de claridade sem fim,</p>
+                    <p>de abrasadora sombra,</p>
+                    <p>de pedra com espuma é o teu tecido,</p>
+                    <p>o cadenciado balanço da tua rede marinha,</p>
+                    <p>o azul movimento."</p>
+                    <p>"Ode ao Rio de janeiro", Pablo Neruda</p>
+                </div>
             </section>
         </main>
     <footer>DIW 2025</footer>

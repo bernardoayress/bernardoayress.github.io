@@ -3,23 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rj papai</title>
-    <style>
-            body {background-color: yellowgreen;}
+    <title>RJ</title>
+         <style>
+            header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: whitesmoke;
+  padding: 10px 20px;
+}
 
-            img { width: 300px}
-            iframe {width: 300px; height: 300px;}
-    </style>
-</head>
-<body>
-    <header>
+/* Menu padrão: horizontal */
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  padding: 10px 20px;
+  background: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px lightgrey;
+}
+
+nav a:last-child {
+  background: dodgerblue;
+  color: white;
+}
+
+nav a:hover {
+  filter: brightness(90%);
+}
+
+/* Mobile: menu em coluna */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
+            body {background-color: white;}
+            img { width: 500px; margin: auto;}
+            p{color: blue;}
+            h1{color: aquamarine;}
+            h2{color: aqua;}
+        </style>
+    </head>
+    <body>
+        <header>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="local.html">Localização</a>
-                <a href="multimedia.html"></a>
                 <a href="info.html">Informação</a>
+                <a href="multimedia.html">Multimédia</a>
             </nav>
-            <h1>RJ - Brasil</h1>
         </header>
         <main>
             <h2>Rio de janeiro</h2>

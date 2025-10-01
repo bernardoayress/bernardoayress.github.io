@@ -3,25 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RJ papai</title>
-    <style>
-        body {background-color: yellowgreen;}
-        img { width: 300px}
-    </style>
-</head>
-<body>
-    <header>
+    <title>RJ</title>
+ <style>
+    tr>td {
+            color: wheat;}
+        
+            header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: whitesmoke;
+  padding: 10px 20px;
+}
+
+/* Menu padrão: horizontal */
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  padding: 10px 20px;
+  background: white;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px lightgrey;
+}
+
+nav a:last-child {
+  background: dodgerblue;
+  color: white;
+}
+
+nav a:hover {
+  filter: brightness(90%);
+}
+
+/* Mobile: menu em coluna */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
+            body {background-color: white;}
+            img { width: 500px; margin: auto;}
+            p{color: blue;}
+            h1{color: aquamarine;}
+            h2{color: aqua;}
+        </style>
+    </head>
+    <body>
+        <header>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="local.html">Localização</a>
-                <a href="multimedia.html"></a>
                 <a href="info.html">Informação</a>
+                <a href="multimedia.html">Multimédia</a>
             </nav>
-            <h1>RJ - Brasil</h1>
         </header>
         <main>
-            <h2>Rio de janeiro</h2>
+            <h2>Informação</h2>
             <img src="images/rio-de-janeiro.jpg" alt="Rio de Janeiro">
+            <section>
+                <table border="1">
+                    <tr>
+                        <th rowspan="2" colspan="2">Demografia</th>
+                        <td colspan="2">População:</td>
+                        <td>6.211.223</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Densidade populacional:</td>
+                        <td>5.174,6</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3" colspan="2">Geografia</th>
+                        <td >Área:</td>
+                        <td>1.200 km²</td>
+                    </tr>
+                    <tr>
+                        <td>Região:</td>
+                        <td>Rio de Janeiro</td>
+                    </tr>
+                    <tr>
+                        <td>País:</td>
+                        <td>Brasil</td>
+                    </tr>
+                </table>
+            </section>
+            
             <h2>Fatos</h2>
             <p>O Rio possui a maior floresta urbana do mundo.</p>
         </main>
